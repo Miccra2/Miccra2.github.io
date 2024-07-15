@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+
+        <link href="../../font">
+
+        <title>6502 emulator</title>
+
+        <style>
+            body {
+                background-color: #333333;
+                color: #AAAAAA;
+                font-style: "FiraCode-Regular";
+                font-size: 36px;
+            }
+
+            .register-caption {
+                color: #CCCCCC;
+                font-size: 46px;
+            }
+        </style>
+        
+    </head>
+
+    <body>
+        <div id="registers">
+            <text class="registers-caption">registers</text>
+            
+            <div id="accumulator" class="register">
+                <text class="register-name">accumulator</text>
+                <text class="register-content-8-bit">00</text>
+            </div>
+
+            <div id="x-index" class="register">
+                <text class="register-name">x-index</text>
+                <text class="register-content-8-bit">00</text>
+            </div>
+
+            <div id="y-index" class="register">
+                <text class="register-name">x-index</text>
+                <text class="register-content-8-bit">00</text>
+            </div>
+
+            <div id="instruction-pointer" class="register">
+                <text class="register-name">instruction-pointer</text>
+                <text class="register-content-16-bit">0000</text>
+            </div>
+
+            <div id="stack-pointer" class="register">
+                <text class="register-name">stack-pointer</text>
+                <text class="register-content-8-bit">00</text>
+            </div>
+
+            <div id="status-flags" class="register">
+                <text class="register-name">status-flags</text>
+                <text class="register-content-8-bit">00</text>
+            </div>
+
+        </div>
+    </body>
+
+</html>
