@@ -22,10 +22,15 @@
                 color: #CCCCCC;
                 font-size: 46px;
             }
-        </style>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            .register {
+                background-color: #555555;
+            }
+
+            .register-content-8-bit, .register-content-16-bit {
+                background-color: #444444;
+            }
+        </style>
         
     </head>
 
@@ -34,32 +39,32 @@
             <text class="register-caption">registers</text>
             
             <div id="accumulator" class="register">
-                <text class="register-name">accumulator</text>
+                <text class="register-name">AC</text>
                 <text class="register-content-8-bit">00</text>
             </div>
 
             <div id="x-index" class="register">
-                <text class="register-name">x-index</text>
+                <text class="register-name">XR</text>
                 <text class="register-content-8-bit">00</text>
             </div>
 
             <div id="y-index" class="register">
-                <text class="register-name">x-index</text>
+                <text class="register-name">YR</text>
                 <text class="register-content-8-bit">00</text>
             </div>
 
             <div id="program-counter" class="register">
-                <text class="register-name">program-counter</text>
-                <text class="register-content-16-bit">0000</text>
+                <text class="register-name">PC</text>
+                <text class="register-content-16-bit">FFFC</text>
             </div>
 
             <div id="stack-pointer" class="register">
-                <text class="register-name">stack-pointer</text>
-                <text class="register-content-8-bit">00</text>
+                <text class="register-name">SP</text>
+                <text class="register-content-8-bit">FF</text>
             </div>
 
             <div id="processor-status" class="register">
-                <text class="register-name">processor-status</text>
+                <text class="register-name">PS</text>
                 <text class="register-content-8-bit">00</text>
             </div>
 
