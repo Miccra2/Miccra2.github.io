@@ -1,6 +1,6 @@
 # Miccra2.github.io website
 
-## index.html
+## indext
 - main web page
 - for navigation to sub pages
 - and for basic information
