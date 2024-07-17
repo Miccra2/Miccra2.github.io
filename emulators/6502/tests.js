@@ -1,24 +1,50 @@
-class Test {
+function TestMsg(test, msg) {
+    if (test) {
+        console.log(`[SUCCESS] ${msg}`);
+    } else {
+        console.log(`[ERROR] ${msg}`);
+    }
+}
+
+class MemoryTest {
     mem;
-    cpu;
 
     constructor() {
         const MEMORYSIZE = 0x10000;
         this.mem = new Memory(MEMORYSIZE);
-        this.cpu = new Processor();
     }
 
-    TestInitializationAndReset() {
+    MemoryInitialization() {
         this.mem.Initialize();
-        this.cpu.Initialize();
+        
+        let is_zero_initialized = true;
+        let i = 0;
+        for (let i = 0; i < this.mem.data.length; i++) {
+            if (this.mem.data[i] !== 0) {
+                is_zero_initialized = false;
+            }
+        }
+
+        TestMsg(this.mem.data.length === 64 * 1024 && is_zero_initialized, "MemoryInitialization");
+    }
+
+    MemoryWrite() {
+        this.mem.Write(0xFFFC, 0x69);
+        TestMsg(this.mem.data[0xFFFC] === 0x69, "MemoryWrite");
+    }
+
+    MemoryRead() {
+        this.mem.data[0x0420] = 0x69;
+        TestMsg(this.mem.Read(0x0420) === 0x69, "MemoryRead");
     }
 }
 
 function test() {
-    const MEMORYSIZE = 0x10000;
-    const MEM = new Memory(MEMORYSIZE);
-    const CPU = new Processor();
+    let mem = new MemoryTest();
 
-    MEM.Initialize();
-    CPU.Reset(MEM);
+    mem.MemoryInitialization();
+    mem.MemoryWrite();
+    mem.MemroyRead();
 }
+
+test();

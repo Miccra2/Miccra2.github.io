@@ -117,9 +117,9 @@ class Processor {
         return memory.data[address] | (memory.data[address + 1] << 8);
     }
 
-    ReadByte(cycles, memory, address) {}
+    // ReadByte(cycles, memory, address) {}
 
-    WriteByte(cycles, memory, address) {}
+    // WriteByte(cycles, memory, address) {}
 
     Reset(memory, address = undefined) {
         if (address == undefined) {
