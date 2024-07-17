@@ -1,0 +1,43 @@
+@font-face {
+    font-family: FiraCode;
+    font-style: regular;
+    src: url(../../font/FiraCode-Regular.ttf);
+}
+
+body {
+    background-color: #333333;
+    color: #AAAAAA;
+    font-family: FiraCode;
+    font-style: regular;
+    font-size: 28px;
+}
+
+text {
+    height: 36px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.register-contents {
+    max-width: min-content;
+}
+
+.register-caption {
+    color: #CCCCCC;
+    font-size: 46px;
+}
+
+.register {
+    background-color: #484848;
+    margin: 2px 2px 2px 2px;
+    padding: 4px 4px 4px 4px;
+    border: solid 2px #666666;
+    display: flex;
+    flex-direction: row;
+}
+
+.register-content-8-bit, .register-content-16-bit {
+    background-color: #404040;
+    border: solid 2px #666666;
+    margin: 1px 1px 1px 1px;
+}
