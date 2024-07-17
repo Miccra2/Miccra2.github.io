@@ -1,7 +1,7 @@
 @font-face {
     font-family: FiraCode;
     font-style: regular;
-    src: url(font/FiraCode-Regular.ttf);
+    src: url(./../font/FiraCode-Regular.ttf);
 }
 
 body {
