@@ -11,26 +11,83 @@
             }
 
             body {
-                background-color: #666666;
+                margin: 0px 0px 0px 0px;
+                padding: 0px 0px 0px 0px;
+                background-color: #444444;
                 font-family: FiraCode-Regular;
                 color: #888888;
             }
 
+            text {
+                min-width: min-content;
+                min-height: min-content;
+            }
+
             .navigation-bar {
-                font-size: 36px;
+                background-color: #333333;
+                display: flex;
+                flex-direction: row;
+                font-size: 24px;
+                min-width: max-content;
+                min-height: min-content;
+            }
+
+            .navigation-bar-member {
+                margin: 2px 2px 2px 2px;
+                padding: 2px 2px 2px 2px;
+                min-height: max-content;
+                float: right;
+            }
+
+            .navigation-bar-member:hover {
+                background-color: #505050;
+                color: #282828;
+                cursor: pointer;
+            }
+
+            .emulator-list {
+                visibility: hidden;
+                display: none;
+                background-color: #FF0000;
             }
         </style>
+
+        <script type="text/javascript">
+            function openPage(url) {
+                window.open(url);
+            }
+            
+            const isHover = (e) => {e.parentElement.querySelector(":hover") === e}
+            const emulator_list_element = document.getElementsByClassName("emulator-list")[0];
+            document.addEventListener("mousmove", function checkHover() {
+                const is_hover = isHover(emulator_list_element);
+                if (is_hover !== checkHover.is_hover) {
+                    console.log(is_hover ? "hovered" : "not hovered");
+                    checkHover.is_hover = hovered;
+                }
+            });
+        </script>
 
     </head>
     <body>
 
         <div class="navigation-bar">
-            <a href="emulators/6502/6502.html">
-                <div class="projects">
-                    <text>PROJECTS</text>
-                </div>
-            </a>
+            <div class="emulators navigation-bar-member">
+                <text>EMULATORS</text>
+            </div>
+            
+            <div class="about navigation-bar-member">
+                <text>ABOUT</text>
+            </div>
         </div>
+
+        <div class="emulator-list">
+            <div class="processor 6502" onclick="openPage('emulators/6502/6502.html')">
+                <text>6502</text>
+            </div>
+        </div>
+
+        <a href="emulators/6502/6502.html">./emulators/6502/6502.html</a>
         
     </body>
 </html>
