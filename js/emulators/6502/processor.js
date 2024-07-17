@@ -13,11 +13,11 @@ class Memory {
         }
     }
 
-    getByte(address) {
+    Read(address) {
         return this.data[address];
     }
 
-    setBate(address, data) {
+    Write(address, data) {
         this.data[address] = data;
     }
 }

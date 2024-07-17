@@ -44,7 +44,7 @@ function test() {
 
     mem.MemoryInitialization();
     mem.MemoryWrite();
-    mem.MemroyRead();
+    mem.MemoryRead();
 }
 
 test();
